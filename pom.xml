@@ -27,9 +27,9 @@
            <arguments>
             <argument>test_principal.py</argument>
            </arguments>    
-
-		   
-		   
+           <environmentVariables>
+             <PYTHONPATH>../../main/python/model:$PYTHONPATH</PYTHONPATH>
+           </environmentVariables>
           </configuration>
           <id>python-test</id>
           <phase>test</phase>
