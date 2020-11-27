@@ -25,7 +25,7 @@
            <executable>python</executable>
            <workingDirectory>src/test/python/app</workingDirectory>
            <arguments>
-            <argument>unitTests.py</argument>
+            <argument>test_principal.py</argument>
            </arguments>    
            <environmentVariables>
              <PYTHONPATH>../../main/python/model:$PYTHONPATH</PYTHONPATH>
