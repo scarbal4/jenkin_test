@@ -1,38 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>my-app</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+
   <build>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
+		<version>1.6.0</version>
         <executions>
          <execution>
           <configuration>
            <executable>python</executable>
-           <workingDirectory>src/test/python/app</workingDirectory>
+           <workingDirectory>src/main/python/model</workingDirectory>
            <arguments>
-            <argument>test_principal.py</argument>
+            <argument>principal.py</argument>
            </arguments>    
-           <environmentVariables>
-             <PYTHONPATH>../../main/python/model:$PYTHONPATH</PYTHONPATH>
-           </environmentVariables>
           </configuration>
-          <id>python-test</id>
-          <phase>test</phase>
+          <id>python_build</id>
+          <phase>generate-resources</phase>
           <goals>
            <goal>exec</goal>
           </goals>
@@ -41,4 +24,3 @@
        </plugin>
     </plugins>
   </build>
-</project>
